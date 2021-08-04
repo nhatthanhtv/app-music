@@ -211,8 +211,8 @@ const app = {
     
     // lắng nghe click vào play list
     playlist.onclick = function(e){
-      const songNode = e.target.close('.song:not(.active)')
-      if( songNode || !e.target.closest('.option')){
+      const songNode = e.target.closest('.song:not(.active)')
+      if( songNode || e.target.closest('.option')){
         // xử lí khi click vào song
         
         if(songNode){
